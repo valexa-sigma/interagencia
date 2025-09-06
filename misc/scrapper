@@ -1,0 +1,10 @@
+https://www.bcv.org.ve/
+
+document.querySelector('.view-id-tipo_de_cambio_oficial_del_bcv .view-content #dolar .centrado strong').innerText
+'144,37320000'
+
+document.querySelector('.view-id-tipo_de_cambio_oficial_del_bcv .view-content #dolar').innerText
+' USD\n144,37320000'
+
+document.querySelector('.view-id-tipo_de_cambio_oficial_del_bcv #dolar').innerText
+' USD\n144,37320000' # get all numbers and comma or dot
