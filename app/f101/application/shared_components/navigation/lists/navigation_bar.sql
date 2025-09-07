@@ -15,7 +15,7 @@ wwv_flow_imp_shared.create_list(
  p_id=>wwv_flow_imp.id(2569156193252309)
 ,p_name=>'Navigation Bar'
 ,p_list_status=>'PUBLIC'
-,p_version_scn=>21428951
+,p_version_scn=>40537219
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(4137506415545076)

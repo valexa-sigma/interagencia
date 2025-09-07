@@ -45,8 +45,8 @@ wwv_flow_imp_page.create_page_plug(
 '       MDT,',
 '       ID_TASA_USD',
 '  from AGENCIA_VENTAS',
-'  WHERE FECHA >= TO_DATE(:P19_FROM_DATE, ''DD/MM/YYYY'')',
-'  AND FECHA < TO_DATE(:P19_TO_DATE, ''DD/MM/YYYY'') + 1',
+'  WHERE 1=1',
+'   AND FECHA >= TO_DATE(:P19_FROM_DATE, ''DD/MM/YYYY'') AND FECHA < TO_DATE(:P19_TO_DATE, ''DD/MM/YYYY'') + 1',
 '  ORDER BY CDT DESC'))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_ajax_items_to_submit=>'P19_FROM_DATE,P19_TO_DATE'
@@ -282,11 +282,12 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(4879056475676627)
 ,p_name=>'P19_FROM_DATE'
 ,p_item_sequence=>10
-,p_item_default=>'TO_CHAR(TRUNC(SYSDATE), ''&SHDATEMASK.'')'
+,p_item_default=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'--TO_CHAR(TRUNC(SYSDATE), ''&SHDATEMASK.'')',
+'TRUNC(SYSDATE)'))
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
 ,p_prompt=>'Fecha Desde'
-,p_format_mask=>'&SHDATEMASK.'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
 ,p_cSize=>30
 ,p_field_template=>1609121967514267634
@@ -305,11 +306,12 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(4879137541676628)
 ,p_name=>'P19_TO_DATE'
 ,p_item_sequence=>20
-,p_item_default=>'TO_CHAR(TRUNC(SYSDATE), ''&SHDATEMASK.'')'
+,p_item_default=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'-- TO_CHAR(TRUNC(SYSDATE), ''&SHDATEMASK.'')',
+'TRUNC(SYSDATE)'))
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
 ,p_prompt=>'Fecha Hasta'
-,p_format_mask=>'&SHDATEMASK.'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
 ,p_cSize=>30
 ,p_begin_on_new_line=>'N'

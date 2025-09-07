@@ -111,7 +111,6 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_identifier=>'F'
 ,p_column_label=>'&CDT.'
 ,p_column_type=>'DATE'
-,p_format_mask=>'&DATEMASK.'
 ,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );
@@ -131,7 +130,6 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_identifier=>'H'
 ,p_column_label=>'&MDT.'
 ,p_column_type=>'DATE'
-,p_format_mask=>'&DATEMASK.'
 ,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );

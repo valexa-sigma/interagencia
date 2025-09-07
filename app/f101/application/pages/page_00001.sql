@@ -25,11 +25,12 @@ wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(2580393966252547)
 ,p_plug_name=>'InterAgencia'
 ,p_region_template_options=>'#DEFAULT#'
-,p_escape_on_http_output=>'Y'
 ,p_plug_template=>2674017834225413037
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_01'
+,p_location=>null
 ,p_plug_query_num_rows=>15
+,p_plug_display_condition_type=>'NEVER'
 ,p_region_image=>'#APP_FILES#icons/app-icon-512.png'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'expand_shortcuts', 'N',

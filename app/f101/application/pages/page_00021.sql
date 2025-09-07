@@ -233,7 +233,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_plug_id=>wwv_flow_imp.id(4964983319971154)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4964983319971154)
 ,p_prompt=>'Cdt'
-,p_format_mask=>'&DATEMASK.'
 ,p_source=>'CDT'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
@@ -287,7 +286,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_plug_id=>wwv_flow_imp.id(4964983319971154)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4964983319971154)
 ,p_prompt=>'Mdt'
-,p_format_mask=>'&DATEMASK.'
 ,p_source=>'MDT'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'

@@ -1,0 +1,353 @@
+prompt --application/pages/page_00006
+begin
+--   Manifest
+--     PAGE: 00006
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.0'
+,p_default_workspace_id=>2000499728072309
+,p_default_application_id=>101
+,p_default_id_offset=>0
+,p_default_owner=>'ELEMASFT'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>6
+,p_name=>'Cierres Operativos'
+,p_alias=>'CIERRES-OPERATIVOS'
+,p_step_title=>'Cierres Operativos'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(6244376406189299)
+,p_plug_name=>'Cierres Operativos'
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'AGENCIA_CIERRES'
+,p_query_order_by_type=>'STATIC'
+,p_query_order_by=>'CDT DESC'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_page_header=>'Cierres Operativos'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(6244443114189299)
+,p_name=>'Cierres Operativos'
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_base_pk1=>'ID_CIERRE'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'C'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_detail_link=>'f?p=&APP_ID.:7:&APP_SESSION.::&DEBUG.:RP:P7_ID_CIERRE:\#ID_CIERRE#\'
+,p_detail_link_text=>'<span role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span>'
+,p_owner=>'MORAP'
+,p_internal_uid=>6244443114189299
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6245184743189308)
+,p_db_column_name=>'ID_CIERRE'
+,p_display_order=>0
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'Id Cierre'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6245570023189310)
+,p_db_column_name=>'ID_AGENCIA'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Id Agencia'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_rpt_named_lov=>wwv_flow_imp.id(4601956201433721)
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6245983713189311)
+,p_db_column_name=>'FECHA_CIERRE'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Fecha Cierre'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6246354918189312)
+,p_db_column_name=>'VENTAS_USD'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Ventas Usd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6246774208189312)
+,p_db_column_name=>'COMPRAS_USD'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'Compras Usd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6247150974189313)
+,p_db_column_name=>'GASTOS_USD'
+,p_display_order=>6
+,p_column_identifier=>'F'
+,p_column_label=>'Gastos Usd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6247598914189314)
+,p_db_column_name=>'ACTIVOS_USD'
+,p_display_order=>7
+,p_column_identifier=>'G'
+,p_column_label=>'Activos Usd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6247959049189314)
+,p_db_column_name=>'AJUSTES_USD'
+,p_display_order=>8
+,p_column_identifier=>'H'
+,p_column_label=>'Ajustes Usd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6248370061189315)
+,p_db_column_name=>'SALDO_USD'
+,p_display_order=>9
+,p_column_identifier=>'I'
+,p_column_label=>'Saldo Usd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6248740713189316)
+,p_db_column_name=>'VENTAS_VES'
+,p_display_order=>10
+,p_column_identifier=>'J'
+,p_column_label=>'Ventas Bs.'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6249198214189316)
+,p_db_column_name=>'COMPRAS_VES'
+,p_display_order=>11
+,p_column_identifier=>'K'
+,p_column_label=>'Compras Bs.'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6249559293189316)
+,p_db_column_name=>'GASTOS_VES'
+,p_display_order=>12
+,p_column_identifier=>'L'
+,p_column_label=>'Gastos Bs.'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6249979214189317)
+,p_db_column_name=>'ACTIVOS_VES'
+,p_display_order=>13
+,p_column_identifier=>'M'
+,p_column_label=>'Activos Bs.'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6250364792189318)
+,p_db_column_name=>'AJUSTES_VES'
+,p_display_order=>14
+,p_column_identifier=>'N'
+,p_column_label=>'Ajustes Bs.'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6250778621189319)
+,p_db_column_name=>'SALDO_VES'
+,p_display_order=>15
+,p_column_identifier=>'O'
+,p_column_label=>'Saldo Bs.'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6251125389189319)
+,p_db_column_name=>'OBSERVACIONES'
+,p_display_order=>16
+,p_column_identifier=>'P'
+,p_column_label=>'Observaciones'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6251509182189320)
+,p_db_column_name=>'ID_CIERRE_ANTERIOR'
+,p_display_order=>17
+,p_column_identifier=>'Q'
+,p_column_label=>'Id Cierre Anterior'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6251919771189321)
+,p_db_column_name=>'CBY'
+,p_display_order=>18
+,p_column_identifier=>'R'
+,p_column_label=>'Cby'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6252377416189322)
+,p_db_column_name=>'CDT'
+,p_display_order=>19
+,p_column_identifier=>'S'
+,p_column_label=>'Cdt'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6252746324189322)
+,p_db_column_name=>'MBY'
+,p_display_order=>20
+,p_column_identifier=>'T'
+,p_column_label=>'Mby'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6253148990189323)
+,p_db_column_name=>'MDT'
+,p_display_order=>21
+,p_column_identifier=>'U'
+,p_column_label=>'Mdt'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(6256071161199267)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'62561'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ID_CIERRE:ID_AGENCIA:FECHA_CIERRE:VENTAS_USD:COMPRAS_USD:GASTOS_USD:ACTIVOS_USD:AJUSTES_USD:SALDO_USD:VENTAS_VES:COMPRAS_VES:GASTOS_VES:ACTIVOS_VES:AJUSTES_VES:SALDO_VES:OBSERVACIONES:ID_CIERRE_ANTERIOR:CBY:CDT:MBY:MDT'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(6255238377189329)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2531463326621247859
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(2567538157252190)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4072363345357175094
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(6253655311189324)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(6244376406189299)
+,p_button_name=>'CREATE'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Create'
+,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
+,p_button_redirect_url=>'f?p=&APP_ID.:7:&APP_SESSION.::&DEBUG.:7::'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(6253924387189325)
+,p_name=>'Edit Report - Dialog Closed'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(6244376406189299)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(6254430491189326)
+,p_event_id=>wwv_flow_imp.id(6253924387189325)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(6244376406189299)
+);
+wwv_flow_imp.component_end;
+end;
+/

@@ -75,6 +75,12 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_link=>'f?p=&APP_ID.:16:&APP_SESSION.::&DEBUG.:::'
 ,p_page_id=>16
 );
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(6255104236189329)
+,p_short_name=>'Cierres Operativos'
+,p_link=>'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>6
+);
 wwv_flow_imp.component_end;
 end;
 /

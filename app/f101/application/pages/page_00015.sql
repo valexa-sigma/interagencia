@@ -22,6 +22,8 @@ wwv_flow_imp_page.create_page(
 ,p_dialog_chained=>'N'
 ,p_dialog_resizable=>'Y'
 ,p_protection_level=>'C'
+,p_read_only_when_type=>'ITEM_IS_NOT_NULL'
+,p_read_only_when=>'P15_ID_CIERRE'
 ,p_page_component_map=>'02'
 );
 wwv_flow_imp_page.create_page_plug(
@@ -388,6 +390,20 @@ wwv_flow_imp_page.create_page_item(
   'min_chars', '1',
   'use_cache', 'Y')).to_clob
 );
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(4879845584676635)
+,p_name=>'P15_ID_CIERRE'
+,p_source_data_type=>'NUMBER'
+,p_item_sequence=>140
+,p_item_plug_id=>wwv_flow_imp.id(3891011755843461)
+,p_item_source_plug_id=>wwv_flow_imp.id(3891011755843461)
+,p_source=>'ID_CIERRE'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
+);
 wwv_flow_imp_page.create_page_validation(
  p_id=>wwv_flow_imp.id(3895457446843474)
 ,p_validation_name=>'P15_CDT must be timestamp'
@@ -438,6 +454,8 @@ wwv_flow_imp_page.create_page_process(
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'Y'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when=>'P15_ID_CIERRE'
+,p_process_when_type=>'ITEM_IS_NULL'
 ,p_internal_uid=>3903642292843490
 );
 wwv_flow_imp_page.create_page_process(

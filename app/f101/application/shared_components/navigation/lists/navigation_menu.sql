@@ -15,7 +15,7 @@ wwv_flow_imp_shared.create_list(
  p_id=>wwv_flow_imp.id(2568025675252198)
 ,p_name=>'Navigation Menu'
 ,p_list_status=>'PUBLIC'
-,p_version_scn=>28722519
+,p_version_scn=>40600188
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(2579447332252532)
@@ -112,6 +112,15 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_icon=>'fa-university'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'16,21'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(6243971190189295)
+,p_list_item_display_sequence=>110
+,p_list_item_link_text=>'Cierres Operativos'
+,p_list_item_link_target=>'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-balance-scale'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'6,7'
 );
 wwv_flow_imp.component_end;
 end;

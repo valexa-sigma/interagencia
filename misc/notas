@@ -1,1 +1,14 @@
+agregar total bs por operacion de ventas, autocalcular pero permitir manual
+calcular tasa si se ingresa el total y viceversa
+tabla de log
+proc de log
+incluir log en proceso de cierre
+probar con tres cierres
+
+agregar comprobante a operacion de compra (efectivo, pago movil o factura)
+agregar header a ventas y compras
+crear lista agencia-productos
+
 las compras, ventas y gastos solo pueden registrarse posterior a la fecha del ultimo cierre
+
+agregar forma pago? referencia?

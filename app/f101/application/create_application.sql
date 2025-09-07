@@ -24,9 +24,9 @@ wwv_imp_workspace.create_flow(
 ,p_flow_language=>'en'
 ,p_flow_language_derived_from=>'FLOW_PRIMARY_LANGUAGE'
 ,p_allow_feedback_yn=>'Y'
-,p_date_format=>'DS'
-,p_timestamp_format=>'DS'
-,p_timestamp_tz_format=>'DS'
+,p_date_format=>'&SHDATEMASK.'
+,p_timestamp_format=>'&DATEMASK.'
+,p_timestamp_tz_format=>'&DATEMASK.'
 ,p_flow_image_prefix => nvl(wwv_flow_application_install.get_image_prefix,'')
 ,p_authentication_id=>wwv_flow_imp.id(3516951696479116)
 ,p_application_tab_set=>0
@@ -61,8 +61,8 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_08=>'SHDATEMASK'
 ,p_substitution_value_08=>'DD/MM/YYYY'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
-,p_files_version=>6
-,p_version_scn=>39127750
+,p_files_version=>11
+,p_version_scn=>40746851
 ,p_print_server_type=>'NATIVE'
 ,p_file_storage=>'DB'
 ,p_is_pwa=>'Y'
